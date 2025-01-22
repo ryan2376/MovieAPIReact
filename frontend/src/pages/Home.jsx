@@ -10,7 +10,7 @@ function Home() {
         {id: 3, title: 'Moses', description: 'bible'},
         {id: 4, title: 'Cat', description: 'lion'}
     ];
-    
+
     const handleSearch = (e) => {
         e.preventDefault();
         alert(searchQuery);
@@ -30,8 +30,8 @@ function Home() {
 
             <div className="movies-grid">
                 {movies.map(movie =>
-                    movie.title.toLowerCase().startsWith(searchQuery) && 
-                    (<MovieCard movie={movie} key={movie.id} />
+                    (
+                    <MovieCard movie={movie} key={movie.id} />
                     )
                 )}
             </div>
