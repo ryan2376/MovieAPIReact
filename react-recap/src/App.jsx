@@ -7,15 +7,15 @@ function App() {
 
   return (
     <>
-      {movieNumber === 1 ? (
+      {/* {movieNumber === 1 ? (
         <MovieCard movie={{
           title: "HummingBird",
           release_date: '2025'
         }} />) : (<MovieCard movie={{
           title: "Chronicles of Narnia",release_date:'1998'}} 
           />)
-      }
-
+      } */}
+      {movieNumber === 1 && <MovieCard movie={{ title: "HummingBird", release_date: '2025' }} />}
 
     </>
   )
