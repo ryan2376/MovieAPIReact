@@ -10,18 +10,17 @@ function Home() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const loadPopularMovies = async () => {
+        const loadPopularMovies = async() => {
             try {
                 const popularMovies = await getPopularMovies();
                 setMovies(popularMovies);
             } catch (err) {
                 console.log(err);
                 setError("Failed to load movies...");
-            } finally {
+            }finally{
                 setLoading(false);
             }
-        };
-
+        }; 
         loadPopularMovies();
     }, []);
 
